@@ -67,7 +67,7 @@
                         </div>
                         <div class='form-row row'>
                            <div class='col-xs-12 col-md-4 form-group cvc required'>
-                              <label class='control-label'>CVV</label> <input autocomplete='off'
+                              <label class='control-label'>CVC</label> <input autocomplete='off'
                                  class='form-control card-cvc' placeholder='ex. 311' size='4'
                                  type='text'>
                            </div>
@@ -98,6 +98,7 @@
          </div>
       </div>
    </body>
+
    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
    <script type="text/javascript">
       $(function() {
