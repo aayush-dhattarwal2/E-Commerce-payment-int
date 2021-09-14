@@ -14,8 +14,13 @@ class DashboardController extends Controller
         return view('admin.Admindashboard');
 
         }
-        else {
-            return redirect('/');
+        else if(auth()->user()->usertype == "employee")
+        {
+            return view('admin.employee');
+        }
+        else if(auth()->user()->usertype == "user")
+        {
+            return view('admin.dashboard');
         }
 
     }
@@ -25,6 +30,16 @@ class DashboardController extends Controller
         if(auth()->user()->usertype == "admin")
         {
             return view('admin.Admindashboard');
+        }
+        else {
+            return redirect('/');
+        }
+    }
+
+    public function accessEmployee(){
+        if(auth()->user()->usertype == "employee")
+        {
+            return view('admin.employee');
         }
         else {
             return redirect('/');

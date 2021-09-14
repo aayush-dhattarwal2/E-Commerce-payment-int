@@ -55,6 +55,23 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                {{-- <label for="email" class="sr-only">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your email" class="bg-grey-100 border-2 w-full p-4 rounderd-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}"> --}}
+                <p>Register As: </p>
+                <input type="radio" id="guest" name="role" value="user" checked>
+                <label for="guest" class="">Guest</label><br>
+                <input type="radio" id="projman" name="role" value="admin">
+                <label for="projman" class="">Project Manager</label><br>
+                <input type="radio" id="employee" name="role" value="employee">
+                <label for="employee" class="">Employee</label> 
+                @error('role')
+                    <div class="text-red-500 mt-2 text-sm">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
             <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
         </form>
     </div>

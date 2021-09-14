@@ -20,13 +20,13 @@ class RegisterController extends Controller
     }
     public function store(Request $request){
 
-        // dd($request->only('email', 'password'));
+        // dd($request);
         $this->validate($request, [
             'name' => 'required|max:255',
             'username' => 'required|max:255',
             'email' => 'required|email|max:255',
-            'password' =>'required|confirmed'
-
+            'password' =>'required|confirmed',
+            'role' => 'required',
         ]);
 
         //validation
@@ -38,6 +38,7 @@ class RegisterController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
+            'usertype' => $request->role,
             'password' => Hash::make($request->password),
         ]);
 

@@ -20,6 +20,8 @@
             <li>
                 <a href="{{ route('admin') }}" class="p-3">Admin Panel</a>
             </li>
+            @elseif (auth()->user()->usertype == 'employee')
+            <p class= "p-3">Employee</p>
             @endif
             @endauth
             
