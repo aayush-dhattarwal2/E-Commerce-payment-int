@@ -9,7 +9,7 @@
 <div class="container">
      
     <div class="panel panel-primary">
-      <div class="panel-heading"><h2>laravel 8 image upload example - ItSolutionStuff.com.com</h2></div>
+      <div class="panel-heading"><h2>laravel 8 image upload example </h2></div>
       <div class="panel-body">
      
         @if ($message = Session::get('success'))

@@ -60,8 +60,4 @@ class RegisterController extends Controller
         return redirect()->route('dashboard');
     }
 
-    // public function smtpMail(){
-       
-    // }
-
 }
